@@ -13,5 +13,7 @@ function play(){
     // RECUPERO GLI IMPUT RADIO QUANDO SONO SELEZIONATI
     const even = document.getElementById('pari').checked;
     const odd = document.getElementById('dispari').checked;
-
+    // RECUPERO IL NUMERO INSERITO DALL'UTENTE
+    let userNumber = document.getElementById('userNumber').value;
+    
 }
