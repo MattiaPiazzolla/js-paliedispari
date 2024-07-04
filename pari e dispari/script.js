@@ -15,5 +15,7 @@ function play(){
     const odd = document.getElementById('dispari').checked;
     // RECUPERO IL NUMERO INSERITO DALL'UTENTE
     let userNumber = document.getElementById('userNumber').value;
-    
+    // CONDIZIONI PER VERIFICARE SE IL NUMERO INSERITO È COMPRESO TRA 1 E 5
+    if (isNaN(userNumber) || userNumber < 1 || userNumber > 5)
+        alert('Valore inserito non valido, Inserisci un numero compreso tra 1 e 5.')
 }
