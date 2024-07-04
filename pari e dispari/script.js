@@ -14,7 +14,7 @@ function play(){
     const evenSelected = document.getElementById('pari').checked;
     const oddSelected = document.getElementById('dispari').checked;
     // RECUPERO IL NUMERO INSERITO DALL'UTENTE
-    let userNumber = document.getElementById('userNumber').value;
+    let userNumber =parseInt(document.getElementById('userNumber').value);
     // CONDIZIONI PER VERIFICARE SE IL NUMERO INSERITO È COMPRESO TRA 1 E 5
     if (isNaN(userNumber) || userNumber < 1 || userNumber > 5)
         alert('Valore inserito non valido, Inserisci un numero compreso tra 1 e 5.')
@@ -27,12 +27,21 @@ function play(){
     let resultMsg = ''
     // DEFINISCO LE CONDIZIONI DI VITTORIA
     if (evenResult && evenSelected){
-        resultMsg = 'Hai vinto!'
+        resultMsg = '<span class="text-success">Hai vinto!</span>'
     } else {
-        resultMsg = 'Hai perso!'
+        resultMsg = '<span class="text-danger">Hai perso!</span>'
     }
-
+    // INIETTO LA FRASE DI OUTPUT
+    document.getElementById('output').innerHTML=`<h3 class="text-center">${resultMsg} Il numero del computer è ${computerNumber} la somma è ${sum}</h3>`
     
 }
 
+// CHIAMO LA FUNZIONE AL CLICK DEL BOTTONE
 startButton.addEventListener('click', play);
+// AGGIUNGO L'EVENTO DI ENTER CHE CHIAMA LA FUNZIONE
+document.addEventListener('keydown', function (event) { //funzionamente non comletamente chiaro, l'avevo trovato su internet ed andando a sotituire alcune parti sono riuscito a farlo funzionare, vorrei capire come targhetizzare bene il punto di input, ho messo document e funziona ma in altri modi non riesco a farlo funzionare
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        play();
+    }
+});
