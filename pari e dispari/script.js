@@ -20,4 +20,6 @@ function play(){
         alert('Valore inserito non valido, Inserisci un numero compreso tra 1 e 5.')
     // CHIAMO LA FUNZIONE PER GENERARE UN NUMERO RANDOM E LO ASSEGNO AD UNA VARIABILE computerNumber
     const computerNumber = randomNumber();
+    // SOMMO I DUE NUMERI 
+    const sum = userNumber + computerNumber;
 }

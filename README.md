@@ -34,7 +34,7 @@ SCOMPOSIZIONE IN SOTTOPROBLEMI
     >>Recupero il numero scelto dall'utente
         >>>Determino le condizioni di validità del numero inserito dall'utente 
     >>Genero un numero random per il computer chiamando la funzione creata in precedenza 
-        >>>Sommo il numeor dell'utente con il numero generato dal computer 
+        >>>Sommo il numeRO dell'utente con il numero generato dal computer 
     >>Controllo se la somma dei due numeri è pari (utilizzando la funzione creata in precedenza)
         >>>Determino le condizioni di vittoria o sconfitta 
     >>Gestisco l'output a schermo 
