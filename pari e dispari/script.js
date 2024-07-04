@@ -11,8 +11,8 @@ function Even(num) {
 // DEFINISCO LA FUNZIONE PER GIOCARE (FUNZIONE PRINCIPALE)
 function play(){
     // RECUPERO GLI IMPUT RADIO QUANDO SONO SELEZIONATI
-    const even = document.getElementById('pari').checked;
-    const odd = document.getElementById('dispari').checked;
+    const evenSelected = document.getElementById('pari').checked;
+    const oddSelected = document.getElementById('dispari').checked;
     // RECUPERO IL NUMERO INSERITO DALL'UTENTE
     let userNumber = document.getElementById('userNumber').value;
     // CONDIZIONI PER VERIFICARE SE IL NUMERO INSERITO È COMPRESO TRA 1 E 5
@@ -22,4 +22,6 @@ function play(){
     const computerNumber = randomNumber();
     // SOMMO I DUE NUMERI 
     const sum = userNumber + computerNumber;
+    // VERIFICO SE LA SOMMA È PARI UTILIZZANDO LA FUNZIONE 
+    const evenResult = even(sum);
 }
