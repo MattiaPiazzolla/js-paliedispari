@@ -18,4 +18,6 @@ function play(){
     // CONDIZIONI PER VERIFICARE SE IL NUMERO INSERITO È COMPRESO TRA 1 E 5
     if (isNaN(userNumber) || userNumber < 1 || userNumber > 5)
         alert('Valore inserito non valido, Inserisci un numero compreso tra 1 e 5.')
+    // CHIAMO LA FUNZIONE PER GENERARE UN NUMERO RANDOM E LO ASSEGNO AD UNA VARIABILE computerNumber
+    const computerNumber = randomNumber();
 }
