@@ -4,3 +4,7 @@ const startButton = document.getElementById('startBtn');
 function randomNumber() {
     return Math.floor(Math.random() * 5) + 1;
 }
+// CREO UNA FUNZIONE PER VERIFICARE SE UN NUMERO È PARI
+function Even(num) {
+    return num % 2 === 0;
+}
