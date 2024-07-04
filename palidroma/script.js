@@ -14,5 +14,8 @@ function checkPalindrom (){
     for(let i = userWord.length-1 ; i >= 0; i--){
         invertWord += userWord[i];
     }
-
+    // DETERMINO LE CONDIZIONI PER VERIFICARE SE LA PAROLA ORIGINALE È UGUALE ALLA PAROLA INVERTITA
+    if(userWord === invertWord){}
 }
+
+
