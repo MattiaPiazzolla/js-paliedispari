@@ -22,6 +22,15 @@ function checkPalindrom (){
         // DEFINISCO IL MESSAGGIO DI OUTPUT IN CASO LA PAROLA NON SIA PALINDROMA
         document.getElementById('output').innerHTML = `<h4 class='text-warning'>La parola ${userWord} non è palindroma</h4>`
     }
+    
 }
 
-
+// AGGIUNGO L'EVENTO DEL PULSANTE CHE CHIAMA LA FUNZIONE
+checkBtn.addEventListener('click', checkPalindrom);
+// AGGIUNGO L'EVENTO DI ENTER CHE CHIAMA LA FUNZIONE
+document.addEventListener('keydown', function (event) { //funzionamente non comletamente chiaro, l'avevo trovato su internet ed andando a sotituire alcune parti sono riuscito a farlo funzionare, vorrei capire come targhetizzare bene il punto di input, ho messo document e funziona ma in altri modi non riesco a farlo funzionare
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        checkPalindrom();
+    }
+});
