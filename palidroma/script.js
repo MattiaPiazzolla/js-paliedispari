@@ -17,10 +17,10 @@ function checkPalindrom (){
     // DETERMINO LE CONDIZIONI PER VERIFICARE SE LA PAROLA ORIGINALE È UGUALE ALLA PAROLA INVERTITA
     if(userWord === invertWord){
         // DEFINISCO IL MESSAGGIO DI OUTPUT IN CASO LA PAROLA SIA PALINDROMA
-        document.getElementById('output').innerHTML = `<h4 class='text-success'>La parola ${userWord} è palindroma</h4>`
+        document.getElementById('output').innerHTML = `<h4 class='fw-light text-success'>La parola <span class="fw-bold">${userWord}</span> è palindroma</h4>`
     } else {
         // DEFINISCO IL MESSAGGIO DI OUTPUT IN CASO LA PAROLA NON SIA PALINDROMA
-        document.getElementById('output').innerHTML = `<h4 class='text-warning'>La parola ${userWord} non è palindroma</h4>`
+        document.getElementById('output').innerHTML = `<h4 class='fw-light text-warning'>La parola <span class="fw-bold">${userWord}</span> non è palindroma</h4>`
     }
     
 }
