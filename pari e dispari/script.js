@@ -5,7 +5,7 @@ function randomNumber() {
     return Math.floor(Math.random() * 5) + 1;
 }
 // CREO UNA FUNZIONE PER VERIFICARE SE UN NUMERO È PARI
-function Even(num) {
+function even(num) {
     return num % 2 === 0;
 }
 // DEFINISCO LA FUNZIONE PER GIOCARE (FUNZIONE PRINCIPALE)
@@ -24,4 +24,15 @@ function play(){
     const sum = userNumber + computerNumber;
     // VERIFICO SE LA SOMMA È PARI UTILIZZANDO LA FUNZIONE 
     const evenResult = even(sum);
+    let resultMsg = ''
+    // DEFINISCO LE CONDIZIONI DI VITTORIA
+    if (evenResult && evenSelected){
+        resultMsg = 'Hai vinto!'
+    } else {
+        resultMsg = 'Hai perso!'
+    }
+
+    
 }
+
+startButton.addEventListener('click', play);
