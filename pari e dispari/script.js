@@ -8,3 +8,7 @@ function randomNumber() {
 function Even(num) {
     return num % 2 === 0;
 }
+// DEFINISCO LA FUNZIONE PER GIOCARE (FUNZIONE PRINCIPALE)
+function play(){
+    
+}
