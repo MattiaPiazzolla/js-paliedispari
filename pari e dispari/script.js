@@ -10,5 +10,8 @@ function Even(num) {
 }
 // DEFINISCO LA FUNZIONE PER GIOCARE (FUNZIONE PRINCIPALE)
 function play(){
-    
+    // RECUPERO GLI IMPUT RADIO QUANDO SONO SELEZIONATI
+    const even = document.getElementById('pari').checked;
+    const odd = document.getElementById('dispari').checked;
+
 }
