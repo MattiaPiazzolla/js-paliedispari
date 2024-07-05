@@ -16,8 +16,10 @@ function play(){
     // RECUPERO IL NUMERO INSERITO DALL'UTENTE
     let userNumber =parseInt(document.getElementById('userNumber').value);
     // CONDIZIONI PER VERIFICARE SE IL NUMERO INSERITO È COMPRESO TRA 1 E 5
-    if (isNaN(userNumber) || userNumber < 1 || userNumber > 5)
-        alert('Valore inserito non valido, Inserisci un numero compreso tra 1 e 5.')
+    if (isNaN(userNumber) || userNumber < 1 || userNumber > 5){
+        alert('Valore inserito non valido, Inserisci un numero compreso tra 1 e 5.');
+       return
+    }
     // CHIAMO LA FUNZIONE PER GENERARE UN NUMERO RANDOM E LO ASSEGNO AD UNA VARIABILE computerNumber
     const computerNumber = randomNumber();
     // SOMMO I DUE NUMERI 
@@ -26,7 +28,7 @@ function play(){
     const evenResult = even(sum);
     let resultMsg = ''
     // DEFINISCO LE CONDIZIONI DI VITTORIA
-    if (evenResult && evenSelected){
+    if ((evenResult && evenSelected) || (!evenResult && oddSelected)){//ho aggiunto la condizione della quale il risultato non è event e la scelta è dispari ed ora funziona!
         resultMsg = '<span class="text-success">Hai vinto!</span>'
     } else {
         resultMsg = '<span class="text-danger">Hai perso!</span>'
